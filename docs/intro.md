@@ -2,46 +2,77 @@
 sidebar_position: 1
 ---
 
-# BinSync
+# Welcome to BinSync
 
-Let's discover **Docusaurus in less than 5 minutes**.
 
-## Getting Started
+BinSync is a decompiler collaboration tool built on the Git versioning system to enable fined-grained reverse
+engineering collaboration regardless of decompiler. BinSync is built by [mahaloz](https://github.com/mahaloz),
+the [angr](https://angr.io) team, and the [SEFCOM](https://sefcom.asu.edu) research lab. It's also due
+in large part to its use by the [Shellphish](https://shellphish.net) hacking team.
 
-Get started by **creating a new site**.
+All good decompilers share common objects called Reverse Engineering Artifacts (REAs). These REAs are the
+center of BinSync's syncing ability. Here are the supported REAs:
+- Function headers (symbol, args, type)
+- Stack Variables (symbol, type)
+- Structs
+- Comments
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Note: all types support user-created types like structs. In short, with BinSync you can track, manage, and sync
+changes you make in your decompiler with any decompiler supported by BinSync.
 
-### What you'll need
+For synchronous help, or a more vocal discussion, join our discord:
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+[![Discord](https://img.shields.io/discord/900841083532087347?label=Discord&style=plastic)](https://discord.gg/wZSCeXnEvR)
 
-## Generate a new site
+## Supported Platforms
+- IDA Pro: **>= 7.3**
+- Binary Ninja: **>= 2.4**
+- angr-management: **>= 9.0**
+- Ghidra: **>= 10.1**
 
-Generate a new Docusaurus site using the **classic template**.
+All versions require **Python >= 3.6** and **Git** installed on your system. Ghidra support is still very much in early stage, so only expect the minimal features.
 
-The classic template will automatically be added to your project after you run the command:
+## Decompiler Support Progress
+Although we support the decompilers in the earlier section, not every decompiler is supported at the same level of syncing.
+To understand the difference between artifact support, pull, push, and auto push, read our [decompiler use introduction](https://binsync.net/docs/dec-introduction/).
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+### IDA Pro
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+| Operations&nbsp;&nbsp;&nbsp;&nbsp; | Function Headers&nbsp;&nbsp;&nbsp;&nbsp; | Stack Vars&nbsp;&nbsp;&nbsp;&nbsp; | Global Vars&nbsp;&nbsp;&nbsp;&nbsp; | Structs&nbsp;&nbsp;&nbsp;&nbsp; | Enums&nbsp;&nbsp;&nbsp;&nbsp; | Comments&nbsp;&nbsp;&nbsp;&nbsp; |
+|-----------	|--------------------	|-----------------------	| --------------------  |--------------------	|--------------------	|--------------------	|
+| Symbols   	| :heavy_check_mark: 	| :heavy_check_mark:    	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	|
+| Types     	| :heavy_check_mark: 	| :heavy_check_mark:    	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	|
+| Pull      	| :heavy_check_mark: 	| :heavy_check_mark:    	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	|
+| Push      	| :heavy_check_mark: 	| :heavy_check_mark: 	    | :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	|
+| Auto Push     | :heavy_check_mark: 	| :heavy_check_mark:    	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	|
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+### Binary Ninja
 
-## Start your site
+| Operations&nbsp;&nbsp;&nbsp;&nbsp; | Function Headers&nbsp;&nbsp;&nbsp;&nbsp; | Stack Vars&nbsp;&nbsp;&nbsp;&nbsp; | Global Vars&nbsp;&nbsp;&nbsp;&nbsp; | Structs&nbsp;&nbsp;&nbsp;&nbsp; | Enums&nbsp;&nbsp;&nbsp;&nbsp; | Comments&nbsp;&nbsp;&nbsp;&nbsp; |
+|------------------------------------|------------------------------------------|------------------------------------|-------------------------------------|---------------------------------|-------------------------------|----------------------------------|
+| Symbols   	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark: 					            | :heavy_check_mark:   					      | :heavy_check_mark: 					      | :heavy_check_mark: 	             |
+| Types     	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark: 					            | :heavy_check_mark:   					      | :heavy_check_mark: 					      | :heavy_check_mark: 	             |
+| Pull      	                        | :heavy_check_mark: 	                     | :heavy_check_mark:    	            | :heavy_check_mark: 					            | :heavy_check_mark:   					      | :heavy_check_mark: 					      | :heavy_check_mark: 	             |
+| Push      	                        | :heavy_check_mark:                       | :heavy_check_mark:		               | :heavy_check_mark:					             | :heavy_check_mark:			           | :heavy_check_mark: 					      | :heavy_check_mark: 					         |
+| Auto Push 	                        | :heavy_check_mark:                       | :heavy_check_mark:		               | :heavy_check_mark:					             | :heavy_check_mark:			           | :heavy_check_mark: 					      | :heavy_check_mark: 					         |
 
-Run the development server:
 
-```bash
-cd my-website
-npm run start
-```
+### Ghidra
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+| Operations&nbsp;&nbsp;&nbsp;&nbsp; | Function Headers&nbsp;&nbsp;&nbsp;&nbsp; | Stack Vars&nbsp;&nbsp;&nbsp;&nbsp; | Global Vars&nbsp;&nbsp;&nbsp;&nbsp; | Structs&nbsp;&nbsp;&nbsp;&nbsp; | Enums&nbsp;&nbsp;&nbsp;&nbsp; | Comments&nbsp;&nbsp;&nbsp;&nbsp; |
+|------------------------------------|------------------------------------------|------------------------------------|-------------------------------------|---------------------------------|-------------------------------|----------------------------------|
+| Symbols   	| :heavy_check_mark: 	| :heavy_check_mark:    	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	|
+| Types     	| :heavy_check_mark: 	| :heavy_check_mark:    	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	|
+| Pull      	| :heavy_check_mark: 	| :heavy_check_mark:    	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	|
+| Push      	| :heavy_check_mark: 	| :heavy_check_mark: 	    | :heavy_check_mark: 	| :heavy_check_mark: 	| :x: 	| :heavy_check_mark: 	|
+| Auto Push     | :heavy_check_mark: 	| :heavy_check_mark:    	| :heavy_check_mark: 	| :heavy_check_mark: 	| :heavy_check_mark: 	| :x: 	|
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+### angr-management
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+| Operations&nbsp;&nbsp;&nbsp;&nbsp; | Function Headers&nbsp;&nbsp;&nbsp;&nbsp; | Stack Vars&nbsp;&nbsp;&nbsp;&nbsp; | Global Vars&nbsp;&nbsp;&nbsp;&nbsp; | Structs&nbsp;&nbsp;&nbsp;&nbsp; | Enums&nbsp;&nbsp;&nbsp;&nbsp; | Comments&nbsp;&nbsp;&nbsp;&nbsp; |
+|-----------	|--------------------	|-----------------------	| --------------------	|--------------------	|--------------------	|--------------------	|
+| Symbols   	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :x: 					| :x: 					| :heavy_check_mark: 	|
+| Types     	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :x: 					| :x: 					| :heavy_check_mark: 	|
+| Pull      	| :heavy_check_mark: 	| :heavy_check_mark:    	| :x: 					| :x: 					| :x: 					| :heavy_check_mark: 	|
+| Push      	| :heavy_check_mark:    | :heavy_check_mark:		| :x:					| :x:					| :x: 					| :heavy_check_mark: 					|
+| Auto Push 	| :heavy_check_mark:    | :heavy_check_mark:		| :x:					| :x:					| :x: 					| :heavy_check_mark: 					|

@@ -1,0 +1,8 @@
+{
+  "label": "Quickstart",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "10 minutes to get BinSync up and running on your decompiler!"
+  }
+}
