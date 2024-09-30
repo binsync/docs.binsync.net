@@ -56,5 +56,5 @@ your SSH key when BinSync is in use.
 After you are done installing BinSync with the steps above, it is reccommended that you validate the install works by syncing data from our example binsync project.
 You can find a tutorial to validate this install, with some basic usage, in the [Joining a BinSync project](./joining-project) section.
 
-After validating your installation, it's **highly** recommended that you read the [Usage Guide](/docs/fundamentals), since BinSync can be rather complicated to
+After validating your installation, it's **highly** recommended that you read the [Usage Guide](/ui-guide), since BinSync can be rather complicated to
 use on your very first look at it. 

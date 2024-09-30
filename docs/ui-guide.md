@@ -7,7 +7,8 @@ sidebar_position: 3
 It's a good idea to start here before going to any other use-page so you understand all the features BinSync has to offer and how to access them.
 
 ## The Core Basics
-BinSync works on Git, which means that everything is version-controlled, and nothing is automatically changed in your local client. If you followed the [Install Validation](/docs/install-validation) page, then you should already understand that you request specific users content. 
+BinSync works on Git, which means that everything is version-controlled, and nothing is automatically changed in your local client. 
+If you followed the [Joining a Project](/quickstart/joining-project) page, then you should already understand that you request specific users content. 
 
 ### Syncing: No Pulling, No Pushing
 You may be thinking that when you click `Sync`, it's like you are pulling, but that is not really the case. Under the hood we have a thread going that is doing real `pulling` and `pushing` on the Git level to update your Git's knowledge of users. This makes more sense if you look at how users are stored in the BinSync database. 
