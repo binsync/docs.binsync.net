@@ -1,2 +1,6 @@
 # docs.binsync.net
-The documentation site for BinSync and its associated projects
+## Development
+Local run with:
+```
+npx docusaurus start
+```
