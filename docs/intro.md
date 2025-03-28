@@ -4,6 +4,7 @@ sidebar_position: 1
 
 # Welcome to BinSync
 
+## Important: visit https://binsync.net/docs/home/ for the most up-to-date documentation
 
 BinSync is a decompiler collaboration tool built on the Git versioning system to enable fined-grained reverse
 engineering collaboration regardless of decompiler. BinSync is built by [mahaloz](https://github.com/mahaloz),
