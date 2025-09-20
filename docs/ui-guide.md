@@ -38,16 +38,18 @@ The `Info Panel` is the singular place where you will get information about the 
 On the bottom of the `Info Panel`, there is text on the right and left.
 ![](./img/manual1.png)
 
-The text on the left is your current Context, which we will explain in the [Context](#context) Tab section. 
+The text on the left is your current Context, which we will explain in the [Context](#context) Tab section.
 
 The text on the right is the user you are connected as and the connection status, depicted with three colors:
-- Green: Connected to BinSync repo and Online
-- Yellow: Connected to BinSync repo, not online (local only)
-- Red: Not connected to a BinSync repo 
+- Green: Connected to a BinSync repo and able to pull and push to remote
+- Yellow: Connected to a BinSync repo but unable to pull or push to remote (either because your repo has no remote or you have limited permissions on the remote repo)
+- Red: Not connected to a BinSync repo
 
-Yellow can occur when you create a local repo and don't connect a remote url to that repo. 
+Yellow can occur when you create a local repo and don't connect a remote url to that repo.
 
-There are four tabs which separate the type of info you can get from BinSync: `Context`, `Functions`, `Globals`, `Activity`. Each tab has a table which you can right-click to do actions.  
+There are four tabs which separate the type of info you can get from BinSync: `Context`, `Functions`, `Globals`, `Activity`. Each tab has a table which you can right-click to do actions.
+
+**Note on addresses:** if you've loaded a binary with a base address offset, you may notice that the addresses of artifacts in your decompiler don't match those in the BinSync panel. By design, BinSync displays offset-normalized addresses.
 
 ### Context
 The Context tab is likely to be the tab you use the most. The Context tab is always associated with a context, which is the current function you are looking at. In the above image, I was looking at `mahaloz_main`. The context changes any time you click on a function. 
@@ -59,7 +61,7 @@ The Functions tab is likely the tab you will look at first when you open a new B
 
 ![](./img/manual2.png)
 
-Right-clicking on row give you the ability to do two thins:
+Right-clicking on row give you the ability to do two things:
 1. Sync from the currently displayed user (the last person to change it) for that specific function
 2. Sync from some other user that has changed that same function at some time before the currently displayed user.
 
@@ -69,6 +71,12 @@ The Globals tab shows things that can't be associated to a function. This includ
 ![](./img/manual3.png)
 
 Similarly to the Functions tab, you can sync either from the displayed person or some other person that has made a change in the past.
+
+The "T" column indicates the type of global:
+- S: Struct
+- T: Typedef
+- E: Enum
+- V: Variable
 
 ### Activity
 The Activity tab shows you people who are assumed to be actively reversing the Binary right now. This will show you a table of any user that has made a change in the last 2 hours to something in their binary. 
@@ -81,11 +89,9 @@ Like all other tabs, you can sync either from the displayed person and artifact 
 
 Now that you know how things work, you can checkout our example workflows.
 
-## Known Issues 
+## Known Issues
 ### My BinSync is not auto-pushing things, wtf?
-This happens when you don't have an ssh key associated with the repo you are trying to edit, or that key is not password unlocked. Make sure the key you are using is not locked or BinSync wont be able to use it. 
-
-If you don't 
+This usually happens when you don't have an ssh key associated with the repo you are trying to edit, or that key is not password unlocked. Make sure the key you are using is not locked or BinSync wont be able to use it.
 
 ### Git Error
 If you ever get a Git Error, you may get a stack trace ending in:
@@ -97,4 +103,4 @@ binascii.Error: Non-hexadecimal digit found
 
 This means BinSync crashed while trying to commit something. Many things could have gone wrong here. Often the easiest way to fix this is just restarting your decompiler (so you can reload BinSync).
 
-If possible, copy the **full** stack trace with the error that likely came right before this error (which caused it), and file an [Issue](https://github.com/angr/binsync/issues). 
+If possible, copy the **full** stack trace with the error that likely came right before this error (which caused it), and file an [Issue](https://github.com/angr/binsync/issues).

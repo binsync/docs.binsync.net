@@ -31,7 +31,7 @@ git clone https://github.com/binsync/example.bsproj.git
 ```
 Or check your plugin menu. For example, if you are using IDA, you should see this option:
 
-   <img src="./img/binsync_idaplugin.png" width="50%" height="50%"></img>
+   <img src="/img/binsync_idaplugin.png" width="50%" height="50%"/>
 
 If neither show, it means the plugin is not in the plugins folder.
 
@@ -40,7 +40,7 @@ If neither show, it means the plugin is not in the plugins folder.
    2. You can click your decompiler menu: `Edit -> Plugins -> Binsync: Configure...`. On Binja it's under `Plugins`. On Ghidra under `Tools`
 
 5. Enter a username and set the project path to the location of `example.bsproj`
-   <img src="./img/demo1.png" width="50%" height="50%"></img>
+   <img src="/img/demo1.png" width="50%" height="50%"/>
 
 If you are running these instructions on a computer without internet, you may want to open the project settings group and select `Disable auto-push to remote`. 
 
@@ -53,7 +53,7 @@ If you are on angr-management or Ghidra this may be hidden. Instead, you should 
 
 7. You should now see an Info Panel. Click on `Activity`, you can see other user's activities. You should also notice
    your username on the bottom right of the panel to be green (online).
-   <img src="/assets/img/demo2.png" width="50%" height="50%"></img>
+   <img src="/img/demo2.png" width="50%" height="50%"/>
 
 Congrats, your BinSync seems to connect to a repo, and recognize you as a user.
 Let's test pulling to verify you can actually do stuff with your install.
@@ -62,7 +62,7 @@ Let's test pulling to verify you can actually do stuff with your install.
    Info Panel that the words on the bottom left say `main@0x40071d`. This is your context.
 
 9. Now click on the `Context` tab, and right click on the user `mahaloz`. Click the `Sync` popup.
-   <img src="/assets/img/demo3.png" width="50%" height="50%"></img>
+   <img src="/img/demo3.png" width="50%" height="50%"/>
 
 10. If everything works out, your decompilation should've changed for `main`. Now the function should be named
    `mahaloz_main`, and it should look something like:
