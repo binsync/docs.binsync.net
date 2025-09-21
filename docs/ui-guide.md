@@ -47,7 +47,7 @@ The text on the right is the user you are connected as and the connection status
 
 Yellow can occur when you create a local repo and don't connect a remote url to that repo.
 
-There are four tabs which separate the type of info you can get from BinSync: `Context`, `Functions`, `Globals`, `Activity`. Each tab has a table which you can right-click to do actions.
+There are five tabs which separate the type of info you can get from BinSync: `Context`, `Functions`, `Globals`, `Activity`, and `Utilities`. Each tab has a table which you can right-click to do actions.
 
 **Note on addresses:** if you've loaded a binary with a base address offset, you may notice that the addresses of artifacts in your decompiler don't match those in the BinSync panel. By design, BinSync displays offset-normalized addresses.
 
@@ -84,6 +84,9 @@ The Activity tab shows you people who are assumed to be actively reversing the B
 ![](./img/manual4.png)
 
 Like all other tabs, you can sync either from the displayed person and artifact or from some other person.
+
+### Utilities
+The Utilities tab shows different options for BinSync. Here you can change BinSync's sync behavior and perform Magic Syncs (replace local artifacts with artifacts from the BinSync repo) and Force Pushes (push all of your artifacts to the BinSync repo). You can also turn on Auto Fast Sync, which automatically replaces your decomipler's auto-generated function names with names from the BinSync repo. 
 
 ---
 
