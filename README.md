@@ -1,5 +1,5 @@
-# docs.binsync.net
-This build is experimental and unfinished. For the most up-to-date docs, visit https://binsync.net/docs/home/
+# BinSync Documentation
+Hosted at [https://docs.binsync.net].
 
 ## Development
 Local run with:
