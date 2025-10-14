@@ -106,4 +106,4 @@ binascii.Error: Non-hexadecimal digit found
 
 This means BinSync crashed while trying to commit something. Many things could have gone wrong here. Often the easiest way to fix this is just restarting your decompiler (so you can reload BinSync).
 
-If possible, copy the **full** stack trace with the error that likely came right before this error (which caused it), and file an [Issue](https://github.com/angr/binsync/issues).
+If possible, copy the **full** stack trace with the error that likely came right before this error (which caused it), and [file an issue](https://github.com/binsync/binsync/issues).
