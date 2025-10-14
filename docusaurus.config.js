@@ -30,13 +30,13 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl: 'https://github.com/binsync/docs.binsync.net',
+          editUrl: 'https://github.com/binsync/docs.binsync.net/tree/main',
           routeBasePath: '/',
         },
         blog: {
           showReadingTime: true,
           feedOptions: { type: ['rss', 'atom'], xslt: true },
-          editUrl: 'https://github.com/binsync/docs.binsync.net',
+          editUrl: 'https://github.com/binsync/docs.binsync.net/tree/main',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
