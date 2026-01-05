@@ -101,4 +101,4 @@ Take note of the variable names & types, and the comments. This will look differ
 
 In this tutorial you learned how to _read_ data, but how do you _write_ in BinSync? All changes you make in BinSync are automatically recorded, and you should see them appear in the Functions/Globals/Context tabs as you use BinSync. Others will sync that data the same way. 
 
-For more general use, tips, and advice, see our [Use Guide](../ui-guide).
+For more general use, tips, and advice, see our [UI Guide](/ui-guide).
