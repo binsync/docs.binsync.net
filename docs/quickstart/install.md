@@ -68,7 +68,7 @@ You'll need to use this method if you cloned your BinSync repo via HTTPS.
 If you are using Ghidra, follow the extra steps needed to finish the install [here](/decompilers/ghidra.md#extra-install-steps).
 
 After you are done installing BinSync with the steps above, you should validate that the install works by syncing data from an example repo we have set up.
-You can find a tutorial to validate this install, with some basic usage, in the [Install Validation](./install-validation) section.
+You can find a tutorial to validate this install, with some basic usage, in the [Install Validation](./joining-project.md#sync-validation) section.
 
 After validating your installation, it's **highly** recommended that you read the [Usage Guide](/ui-guide), since BinSync can be rather complicated to
 use on your very first look at it.

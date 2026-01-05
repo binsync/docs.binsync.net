@@ -14,7 +14,7 @@ In this tutorial, you will validate your BinSync install can:
 
 For this tutorial, we will use the example binsync repo that is a part of the BinSync project. 
 
-### Sync Validation 
+## Sync Validation 
 1. Clone down the example BinSync project 
 ```bash
 git clone https://github.com/binsync/example.bsproj.git
