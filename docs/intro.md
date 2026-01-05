@@ -21,10 +21,9 @@ center of BinSync's syncing ability. Here are the supported REAs:
 - Enums
 - Comments
 
-Note: all types support user-created types like structs. In short, with BinSync you can track, manage, and sync
-changes you make in your decompiler with any decompiler supported by BinSync.
+Note: all types support user-created types like structs.
 
-For synchronous help, or a more vocal discussion, join our discord:
+**Join our discord below for more online help**:
 
 [![Discord](https://img.shields.io/discord/900841083532087347?label=Discord&style=plastic)](https://discord.gg/wZSCeXnEvR)
 
@@ -32,7 +31,7 @@ For synchronous help, or a more vocal discussion, join our discord:
 - IDA Pro: **>= 8.4** (if you have an older version, use [BinSync v4.10.1](https://github.com/binsync/binsync/commit/bac7b9d4a6cca64810bb07428391415702765cd4))
 - Binary Ninja: **>= 2.4**
 - angr-management: **>= 9.0**
-- Ghidra: **>= 10.1**
+- Ghidra: **>= 12.0** (launched in [PyGhidra mode](https://github.com/NationalSecurityAgency/ghidra/blob/stable/GhidraDocs/GettingStarted.md#pyghidra-mode))
 
 All versions require **Python >= 3.10** and **Git** installed on your system.
 

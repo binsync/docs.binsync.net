@@ -5,19 +5,26 @@ sidebar_position: 3
 # Ghidra
 
 ## Extra Install Steps
-You must install using `pip3 install binsync[ghidra]` for the extra dependencies.  After doing this, continue with [installation via Script](/quickstart/install#installation-via-script).
-- Install extra dependencies using `pip3 install binsync[ghidra]`
-- Continue with [installation via Script](/quickstart/install#installation-via-script)
-- From the main window, go to Edit -> Plugin Path and make sure the plugin path created by BinSync is included
-- From CodeBrowser, go to Window -> Script Manager -> find `binsync_plugin.py` and tick the "In Tool" box in its line
-- Start BinSync in CodeBrowser via Tools -> BinSync -> Start UI
+After doing the traditional install, you must activate the BinSync script in Ghidra. 
+Note, you should have launched in [PyGhidra mode](https://github.com/NationalSecurityAgency/ghidra/blob/stable/GhidraDocs/GettingStarted.md#pyghidra-mode), which can be done using the Ghidra `support/pyghidraRun` script.
+Once launched, open any binary, then:
 
-## Extra Info
-BinSync is written in Python 3, however, Ghidra only has a Python 2 backend. 
-To deal with this, we use a vendored version of [ghidra_bridge](https://github.com/justfoxing/ghidra_bridge).
-We copy a BinSync stub, along with Ghidra Bridge code, into the `ghidra_scripts` folder, which is Python 2. 
-Inside Ghidra, when you start BinSync, we use the Python 2 side to start the Python 3 GUI in another thread. 
-We use Ghidra Bridge to make change requests to the Ghidra UI.
+1. On the top menu bar, click `Window->Script Manager`
+2. Using the `Filter` search bar on the bottom of that window, search for `binsync`
+3. Check the box next to the found `binsync_plugin.py`
+4. Close the script manager
+5. BinSync can now be started on the top menu bar `Tools->BinSync->Connect`
+
+## Useful Info
+Ghidra's GUI engine is written in Java, but BinSync's GUI is written in Python.
+To make BinSync's GUI reusable in Ghidra, we run a Python server in Ghidra that exposes BinSync APIs.
+Then, in another Python process, we connect to that server with the GUI window (which is the client).
+This gives us the speed of native Python 3 execution in Ghidra, with the bottleneck being GUI operations.
+
+The technicals go like this when you click `Connect` in Ghidra:
+1. We start `DecompilerServer` [in Ghidra's Python process](https://github.com/binsync/binsync/blob/b032aeff37155867f76042c721d4da164b630145/binsync/interface_overrides/ghidra.py#L83)
+2. We subprocess out the command `binsync -s ghidra`, which [starts the GUI in a new process](https://github.com/binsync/binsync/blob/b032aeff37155867f76042c721d4da164b630145/binsync/interface_overrides/ghidra.py#L83).
+3. The user uses the new GUI, which is a client, to their server
 
 ## Support Progress
 

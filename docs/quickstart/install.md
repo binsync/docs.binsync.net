@@ -4,9 +4,10 @@ sidebar_position: 1
 
 # Installation
 
-There are two main ways to install BinSync: via pip and an installation script, or via pip and manual configuration.
+Installing BinSync on most decompilers is a two step process: first you install the binsync library which
+provides functionality, than you copy (automated or manual) as stub into the decompiler to call that code.
 
-**Before proceeding, please see specific instructions for [Binary Ninja](/decompilers/binja) and [Ghidra](/decompilers/ghidra)**
+**Before proceeding, please see specific instructions for [Binary Ninja](/decompilers/binja) if you are using it.**
 
 ## Installation via Script
 
@@ -39,11 +40,10 @@ If you are not able to find the `binsync` command, you might be able to access i
 please jump to the [Manual Install](#manual-install) section.
 
 
-## Manual Install
+## Manual Install (optional)
 If you were able to use a plugin manager or the built-in Python script, skip this.
 
-If you are unable to install using the earlier method, you are probably on Windows. In that case, installing
-BinSync is a two-step process:
+If you are unable to install using the earlier method, you are probably on Windows. In that case:
 1. Install the core with the Python version associated with your decompiler: `pip3 install binsync`
 2. Install the decompiler stub directly into your decompilers `plugin` folder.
 
@@ -65,7 +65,9 @@ A [Git credential helper](https://git-scm.com/doc/credential-helpers) can secure
 You'll need to use this method if you cloned your BinSync repo via HTTPS.
 
 ## Install Validation and Usage
-After you are done installing BinSync with the steps above, you should validate that the install works by syncing data from an example repo we have setup.
+If you are using Ghidra, follow the extra steps needed to finish the install [here](/decompilers/ghidra.md#extra-install-steps).
+
+After you are done installing BinSync with the steps above, you should validate that the install works by syncing data from an example repo we have set up.
 You can find a tutorial to validate this install, with some basic usage, in the [Install Validation](./install-validation) section.
 
 After validating your installation, it's **highly** recommended that you read the [Usage Guide](/ui-guide), since BinSync can be rather complicated to
