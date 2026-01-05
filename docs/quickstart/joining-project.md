@@ -5,14 +5,14 @@ sidebar_position: 2
 # Joining a Project
 
 Although every decompiler has a slightly different implementation for BinSync, the instructions below should work almost the same for all decompilers.
-This is because we use a unified GUI made to work in a variety of QT versions. 
+This is because we use a unified GUI made to work in a variety of Qt versions. 
 
 In this tutorial, you will validate your BinSync install can:
 1. Use Git to connect to a BinSync project
 2. Read data from the remote BinSync project
 3. Set the read data into your decompiler. 
 
-For this tutorial, we will use the example binsync repo that is a part of the BinSync project. 
+For this tutorial, we will use the example binsync repo that is a part of the BinSync project.
 
 ## Sync Validation 
 1. Clone down the example BinSync project 
@@ -96,5 +96,9 @@ char __cdecl mahaloz_main(int my_arg1, const char **my_arg2, int **my_arg3)
 ```
 
 Take note of the variable names & types, and the comments. This will look different per decompiler, but the symbols and types should line up for the most part.
+
+--- 
+
+In this tutorial you learned how to _read_ data, but how do you _write_ in BinSync? All changes you make in BinSync are automatically recorded, and you should see them appear in the Functions/Globals/Context tabs as you use BinSync. Others will sync that data the same way. 
 
 For more general use, tips, and advice, see our [Use Guide](../ui-guide).
