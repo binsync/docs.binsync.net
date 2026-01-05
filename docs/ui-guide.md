@@ -13,7 +13,7 @@ If you followed the [Joining a Project](/quickstart/joining-project) page, then 
 ### Syncing: No Pulling, No Pushing
 You may be thinking that when you click `Sync`, it's like you are pulling, but that is not really the case. Under the hood we have a thread going that is doing real `pulling` and `pushing` on the Git level to update your Git's knowledge of users. This makes more sense if you look at how users are stored in the BinSync database. 
 
-Taking a look at the example repo, [mahaloz/binsync_example_repo](https://github.com/mahaloz/binsync_example_repo/), you will notice every user is actually a branch based on the initial `binsync/__root__` which has no changes:
+Taking a look at the example repo, [binsync/example.bsproj](https://github.com/binsync/example.bsproj), you will notice every user is actually a branch based on the initial `binsync/__root__` which has no changes:
 
 ```bash
 $ git branch
